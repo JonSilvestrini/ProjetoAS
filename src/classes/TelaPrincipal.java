@@ -86,6 +86,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         itmFluxoDeClientes = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sistema ERP \"Filho do Patrão\"");
         setPreferredSize(new java.awt.Dimension(1280, 720));
 
         desktop.setBackground(new java.awt.Color(240, 240, 240));
@@ -133,12 +134,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menuCadastro.add(itmFornecedor);
 
         itmInadimplencia.setText("Inadimplência");
+        itmInadimplencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmInadimplenciaActionPerformed(evt);
+            }
+        });
         menuCadastro.add(itmInadimplencia);
 
         itmProdutos.setText("Produtos");
+        itmProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmProdutosActionPerformed(evt);
+            }
+        });
         menuCadastro.add(itmProdutos);
 
         itmFuncionario.setText("Funcionário");
+        itmFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmFuncionarioActionPerformed(evt);
+            }
+        });
         menuCadastro.add(itmFuncionario);
 
         barraMenuPrincipal.add(menuCadastro);
@@ -226,6 +242,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
         desktop.add(tcf);
         tcf.setVisible(true);
     }//GEN-LAST:event_itmFornecedorActionPerformed
+
+    private void itmInadimplenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmInadimplenciaActionPerformed
+        // TODO add your handling code here:
+        TelaCadInad tci = new TelaCadInad(this.user);
+        desktop.add(tci);
+        tci.setVisible(true);
+    }//GEN-LAST:event_itmInadimplenciaActionPerformed
+
+    private void itmProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmProdutosActionPerformed
+        // TODO add your handling code here:
+        TelaCadProd tcp = new TelaCadProd(this.user);
+        desktop.add(tcp);
+        tcp.setVisible(true);
+    }//GEN-LAST:event_itmProdutosActionPerformed
+
+    private void itmFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmFuncionarioActionPerformed
+        // TODO add your handling code here:
+        TelaCadFunc tcfunc = new TelaCadFunc(this.user);
+        desktop.add(tcfunc);
+        tcfunc.setVisible(true);
+    }//GEN-LAST:event_itmFuncionarioActionPerformed
 
     /**
      * @param args the command line arguments
