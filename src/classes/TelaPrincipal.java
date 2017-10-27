@@ -162,6 +162,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menuControle.setText("Controle");
 
         itmEstoque.setText("Estoque");
+        itmEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmEstoqueActionPerformed(evt);
+            }
+        });
         menuControle.add(itmEstoque);
 
         itmContas.setText("Contas");
@@ -263,6 +268,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         desktop.add(tcfunc);
         tcfunc.setVisible(true);
     }//GEN-LAST:event_itmFuncionarioActionPerformed
+
+    private void itmEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmEstoqueActionPerformed
+        // TODO add your handling code here:
+        TelaConEst tce = new TelaConEst(this.user);
+        desktop.add(tce);
+        tce.setVisible(true);
+    }//GEN-LAST:event_itmEstoqueActionPerformed
 
     /**
      * @param args the command line arguments
