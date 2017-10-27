@@ -12,14 +12,14 @@ import javax.swing.JOptionPane;
  *
  * @author Jonatas
  */
-public class TelaCadFunc extends javax.swing.JInternalFrame {
+public class TelaConEst extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TelaCadForn
      */
     private String user;
     private byte modoEdit;
-    public TelaCadFunc(String user) {
+    public TelaConEst(String user) {
         initComponents();
         this.user = user;
         btnSalvar.setVisible(false);
@@ -51,31 +51,22 @@ public class TelaCadFunc extends javax.swing.JInternalFrame {
         btnConsultar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
-        spnCodFor = new javax.swing.JSpinner();
+        txtProd = new javax.swing.JTextField();
+        spnCodProd = new javax.swing.JSpinner();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtEndereco = new javax.swing.JTextField();
+        txtForn = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txtTel = new javax.swing.JTextField();
+        txtQtdEst = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        txtEmail = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        txtSexo = new javax.swing.JTextField();
+        txtVal = new javax.swing.JTextField();
         btnSalvar = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        txtSalario = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        txtFuncao = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        txtHoraTrab = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        txtTurno = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
-        setTitle("Cadastro de Funcionários");
+        setResizable(true);
+        setTitle("Controle de Estoque");
 
         barraFerr.setFloatable(false);
         barraFerr.setMaximumSize(new java.awt.Dimension(214, 40));
@@ -138,29 +129,25 @@ public class TelaCadFunc extends javax.swing.JInternalFrame {
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setPreferredSize(new java.awt.Dimension(500, 400));
 
-        jLabel1.setText("Nome");
+        jLabel1.setText("Produto");
 
-        txtNome.setEditable(false);
+        txtProd.setEditable(false);
 
-        spnCodFor.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        spnCodProd.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
-        jLabel2.setText("Matrícula");
+        jLabel2.setText("Cod. Produto");
 
-        jLabel3.setText("Endereço");
+        jLabel3.setText("Fornecedor");
 
-        txtEndereco.setEditable(false);
+        txtForn.setEditable(false);
 
-        jLabel4.setText("Telefone");
+        jLabel4.setText("Qtd no Estoque");
 
-        txtTel.setEditable(false);
+        txtQtdEst.setEditable(false);
 
-        jLabel5.setText("E-mail");
+        jLabel5.setText("Validade ");
 
-        txtEmail.setEditable(false);
-
-        jLabel6.setText("Sexo");
-
-        txtSexo.setEditable(false);
+        txtVal.setEditable(false);
 
         btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/document-save.png"))); // NOI18N
         btnSalvar.setText("Salvar");
@@ -178,63 +165,32 @@ public class TelaCadFunc extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel7.setText("Salário");
-
-        txtSalario.setEditable(false);
-
-        jLabel8.setText("Função");
-
-        txtFuncao.setEditable(false);
-
-        jLabel9.setText("Horário de Trabalho");
-
-        txtHoraTrab.setEditable(false);
-
-        jLabel10.setText("Turno");
-
-        txtTurno.setEditable(false);
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
+                        .addGap(101, 101, 101)
                         .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnCancel))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel6))
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(spnCodFor, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtNome)
-                                .addComponent(txtEndereco)
-                                .addComponent(txtTel)
-                                .addComponent(txtEmail)
-                                .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel9)
-                                .addComponent(jLabel8)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel10))
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtSalario)
-                                .addComponent(txtFuncao)
-                                .addComponent(txtHoraTrab)
-                                .addComponent(txtTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(spnCodProd, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtProd, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
+                            .addComponent(txtForn)
+                            .addComponent(txtQtdEst)
+                            .addComponent(txtVal))))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -242,45 +198,25 @@ public class TelaCadFunc extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(spnCodFor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spnCodProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtForn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtQtdEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(txtFuncao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(txtHoraTrab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(txtTurno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                    .addComponent(txtVal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancel)
                     .addComponent(btnSalvar))
@@ -302,7 +238,7 @@ public class TelaCadFunc extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(barraFerr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -313,7 +249,7 @@ public class TelaCadFunc extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         int esclh;
         Object[] options = { "Confirmar", "Cancelar" };
-        esclh = JOptionPane.showOptionDialog(rootPane, "Realmente deseja excluir o cadastro Nº" + spnCodFor.getValue().toString() + "?", "Excluir", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
+        esclh = JOptionPane.showOptionDialog(rootPane, "Realmente deseja excluir o cadastro Nº" + spnCodProd.getValue().toString() + "?", "Excluir", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
         
     }//GEN-LAST:event_btnExcluirActionPerformed
 
@@ -322,18 +258,12 @@ public class TelaCadFunc extends javax.swing.JInternalFrame {
         this.modoEdit = 1;
         btnSalvar.setVisible(true);
         btnCancel.setVisible(true);
-        txtNome.setEditable(true);
-        txtTel.setEditable(true);
-        txtEndereco.setEditable(true);
-        txtSexo.setEditable(true);
-        txtEmail.setEditable(true);
+        txtProd.setEditable(true);
+        txtQtdEst.setEditable(true);
+        txtForn.setEditable(true);
+        txtVal.setEditable(true);
         btnEditar.setEnabled(false);
         btnExcluir.setEnabled(false);
-        txtSalario.setEditable(true);
-        txtFuncao.setEditable(true);
-        txtSalario.setEditable(true);
-        txtHoraTrab.setEditable(true);
-        txtTurno.setEditable(true);
     }//GEN-LAST:event_btnIncluirActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
@@ -341,35 +271,25 @@ public class TelaCadFunc extends javax.swing.JInternalFrame {
         this.modoEdit = 2;
         btnSalvar.setVisible(true);
         btnCancel.setVisible(true);
-        txtNome.setEditable(true);
-        txtTel.setEditable(true);
-        txtEndereco.setEditable(true);
-        txtSexo.setEditable(true);
-        txtEmail.setEditable(true);
+        txtProd.setEditable(true);
+        txtQtdEst.setEditable(true);
+        txtForn.setEditable(true);
+        txtVal.setEditable(true);
         btnIncluir.setEnabled(false);
         btnExcluir.setEnabled(false);
-        txtSalario.setEditable(true);
-        txtFuncao.setEditable(true);
-        txtHoraTrab.setEditable(true);
-        txtTurno.setEditable(true);
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         // TODO add your handling code here:
         btnSalvar.setVisible(false);
         btnCancel.setVisible(false);
-        txtNome.setEditable(false);
-        txtTel.setEditable(false);
-        txtEndereco.setEditable(false);
-        txtSexo.setEditable(false);
-        txtEmail.setEditable(false);
+        txtProd.setEditable(false);
+        txtQtdEst.setEditable(false);
+        txtForn.setEditable(false);
+        txtVal.setEditable(false);
         btnEditar.setEnabled(true);
         btnIncluir.setEnabled(true);
         btnExcluir.setEnabled(true);
-        txtSalario.setEditable(false);
-        txtFuncao.setEditable(false);
-        txtHoraTrab.setEditable(false);
-        txtTurno.setEditable(false);
         this.modoEdit = 0;
     }//GEN-LAST:event_btnSalvarActionPerformed
 
@@ -389,18 +309,13 @@ public class TelaCadFunc extends javax.swing.JInternalFrame {
             case 0:
                 btnSalvar.setVisible(false);
                 btnCancel.setVisible(false);
-                txtNome.setEditable(false);
-                txtTel.setEditable(false);
-                txtEndereco.setEditable(false);
-                txtSexo.setEditable(false);
-                txtEmail.setEditable(false);
+                txtProd.setEditable(false);
+                txtQtdEst.setEditable(false);
+                txtForn.setEditable(false);
+                txtVal.setEditable(false);
                 btnEditar.setEnabled(true);
                 btnIncluir.setEnabled(true);
                 btnExcluir.setEnabled(true);
-                txtSalario.setEditable(false);
-                txtFuncao.setEditable(false);
-                txtHoraTrab.setEditable(false);
-                txtTurno.setEditable(false);
                 this.modoEdit = 0;
                 break;
         }
@@ -422,25 +337,15 @@ public class TelaCadFunc extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnIncluir;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner spnCodFor;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtEndereco;
-    private javax.swing.JTextField txtFuncao;
-    private javax.swing.JTextField txtHoraTrab;
-    private javax.swing.JTextField txtNome;
-    private javax.swing.JTextField txtSalario;
-    private javax.swing.JTextField txtSexo;
-    private javax.swing.JTextField txtTel;
-    private javax.swing.JTextField txtTurno;
+    private javax.swing.JSpinner spnCodProd;
+    private javax.swing.JTextField txtForn;
+    private javax.swing.JTextField txtProd;
+    private javax.swing.JTextField txtQtdEst;
+    private javax.swing.JTextField txtVal;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,14 +30,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 this.itmProdutos.setEnabled(false);
                 this.itmFuncionario.setEnabled(false);
                 this.itmContas.setEnabled(false);
-                this.itmReceita.setEnabled(false);
             } else if (this.user.equals("caixa")) {
                 this.menuRelatorio.setEnabled(false);
                 this.itmFornecedor.setEnabled(false);
                 this.itmProdutos.setEnabled(false);
                 this.itmFuncionario.setEnabled(false);
                 this.itmContas.setEnabled(false);
-                this.itmReceita.setEnabled(false);
             } else {
                 this.itmRelatorioContas.setEnabled(false);
                 this.itmFluxoDeClientes.setEnabled(false);
@@ -48,7 +46,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 this.itmInadimplencia.setEnabled(false);
                 this.itmContas.setEnabled(false);
                 this.itmPedidos.setEnabled(false);
-                this.itmReceita.setEnabled(false);
             }
         }
         
@@ -76,7 +73,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menuControle = new javax.swing.JMenu();
         itmEstoque = new javax.swing.JMenuItem();
         itmContas = new javax.swing.JMenuItem();
-        itmReceita = new javax.swing.JMenuItem();
         itmPedidos = new javax.swing.JMenuItem();
         menuRelatorio = new javax.swing.JMenu();
         itmLucro = new javax.swing.JMenuItem();
@@ -170,10 +166,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menuControle.add(itmEstoque);
 
         itmContas.setText("Contas");
+        itmContas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmContasActionPerformed(evt);
+            }
+        });
         menuControle.add(itmContas);
-
-        itmReceita.setText("Receita");
-        menuControle.add(itmReceita);
 
         itmPedidos.setText("Pedidos");
         menuControle.add(itmPedidos);
@@ -276,6 +274,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         tce.setVisible(true);
     }//GEN-LAST:event_itmEstoqueActionPerformed
 
+    private void itmContasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmContasActionPerformed
+        // TODO add your handling code here:
+        TelaPoop coco = new TelaPoop(this.user);
+        desktop.add(coco);
+        coco.darDescarga();
+    }//GEN-LAST:event_itmContasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -294,7 +299,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem itmLucro;
     private javax.swing.JMenuItem itmPedidos;
     private javax.swing.JMenuItem itmProdutos;
-    private javax.swing.JMenuItem itmReceita;
     private javax.swing.JMenuItem itmRelatorioContas;
     private javax.swing.JMenuItem itmRelatorioEstoque;
     private javax.swing.JMenuItem itmSair;
