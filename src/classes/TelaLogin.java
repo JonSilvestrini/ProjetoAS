@@ -113,15 +113,15 @@ public class TelaLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
         String user = txtUser.getText();
         if (((user.equals("admin") || user.equals("dono") || user.equals("caixa") || 
-            user.equals("atendente") || user.equals("almoxarifado"))) && pwdSenha.getText().equals("1234")){
+            user.equals("atendente") || user.equals("almoxarifado")))) {
             this.dispose();
             TelaPrincipal tp = new TelaPrincipal(user, this.resX, this.resY);
             tp.setBounds((this.resX/2-400),(this.resY/2-300), 800, 600);
             tp.setExtendedState(MAXIMIZED_BOTH);
             tp.setVisible(true);
-        } else if (txtUser.getText().isEmpty() || pwdSenha.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(rootPane, "Por favor, preencha todos os campos", "Falha no login", JOptionPane.ERROR_MESSAGE);
-        } else {
+        } else if (txtUser.getText().isEmpty()) {
+            //JOptionPane.showMessageDialog(rootPane, "Por favor, preencha todos os campos", "Falha no login", JOptionPane.ERROR_MESSAGE);
+        //} else {
             JOptionPane.showMessageDialog(rootPane, "Usuário e/ou senha incorreta. Por favor, verifique as informações fornecidas", "Falha no login", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
