@@ -181,12 +181,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menuRelatorio.setText("Relatórios");
 
         itmLucro.setText("Lucro");
+        itmLucro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmLucroActionPerformed(evt);
+            }
+        });
         menuRelatorio.add(itmLucro);
 
         itmRelatorioContas.setText("Contas");
+        itmRelatorioContas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmRelatorioContasActionPerformed(evt);
+            }
+        });
         menuRelatorio.add(itmRelatorioContas);
 
         itmVendas.setText("Vendas");
+        itmVendas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmVendasActionPerformed(evt);
+            }
+        });
         menuRelatorio.add(itmVendas);
 
         itmRelatorioEstoque.setText("Estoque");
@@ -280,6 +295,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
         desktop.add(coco);
         coco.darDescarga();
     }//GEN-LAST:event_itmContasActionPerformed
+
+    private void itmLucroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmLucroActionPerformed
+        // TODO add your handling code here:
+        TelaRelaLucro trl = new TelaRelaLucro(this.user);
+        desktop.add(trl);
+        trl.setVisible(true);
+    }//GEN-LAST:event_itmLucroActionPerformed
+
+    private void itmRelatorioContasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmRelatorioContasActionPerformed
+        // TODO add your handling code here:
+        TelaRelaContas trc = new TelaRelaContas(this.user);
+        desktop.add(trc);
+        trc.setVisible(true);
+    }//GEN-LAST:event_itmRelatorioContasActionPerformed
+
+    private void itmVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmVendasActionPerformed
+        // TODO add your handling code here:
+        TelaRelaVenda trv = new TelaRelaVenda(this.user);
+        desktop.add(trv);
+        trv.setVisible(true);
+    }//GEN-LAST:event_itmVendasActionPerformed
 
     /**
      * @param args the command line arguments
